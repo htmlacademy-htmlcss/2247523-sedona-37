@@ -3,14 +3,18 @@
 
   <head>
     <meta charset="utf-8">
-    <title>Каталог</title>
+    <title>Каталог гостиниц</title>
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png">
+    <link rel="stylesheet" href="style.css">
   </head>
 
   <body>
-    <div class="container">
+    <div>
       <header class="header">
         <a class="logo-link" href="index.html">
-          <img class="logo-image" src="#" alt="Логотип города Седона." width="140" height="70">
+          <img class="logo-image" src="images\logo\logo-sedona.svg" alt="Логотип города Седона." width="140"
+            height="70">
         </a>
         <nav class="nav">
           <ul class="nav-list">
@@ -44,7 +48,7 @@
       </header>
 
       <main class="main-catalog">
-        <header class="inner-header">
+        <header class="inner-header image-container">
           <h1 class="inner-header-title">Гостиницы Седоны</h1>
           <ul class="breadcrumbs">
             <li class="breadcrumbs-item">
@@ -60,7 +64,6 @@
             <h2 class="visually-hidden">Поиск гостиниц с фильтрами</h2>
             <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get"
               oninput="pricecount.value=price.value">
-
               <fieldset class="catalog-filter-group">
                 <legend class="catalog-filter-title">Инфраструктура:</legend>
                 <ul class="catalog-filter-list">
@@ -149,7 +152,8 @@
           <div class="hotels-list">
             <article class="hotels-card">
               <a class="hotels-card-link" href="#">
-                <img class="hotel-card-image" src="" alt="Amara Resort & Spa" width="300" height="212">
+                <img class="hotel-card-image" src="images\hotel\hotel-amara-resort.jpg" alt="Amara Resort & Spa"
+                  width="300" height="212">
               </a>
               <a class="hotels-card-link" href="#">
                 <h3 class="hotels-card-title">Виды рядом с Amara Resort & Spa.</h3>
@@ -163,8 +167,8 @@
             </article>
             <article class="hotels-card">
               <a class="hotels-card-link" href="#">
-                <img class="hotels-card-image" src="" alt="Виды рядом с Villas at Poco Diablo." width="300"
-                  height="212">
+                <img class="hotels-card-image" src="images\hotel\hotel-villas-at-poco-diablo.jpg"
+                  alt="Виды рядом с Villas at Poco Diablo." width="300" height="212">
               </a>
               <a class="hotels-card-link" href="#">
                 <h3 class="hotels-card-title">Villas at Poco Diablo</h3>
@@ -178,7 +182,8 @@
             </article>
             <article class="hotels-card">
               <a class="hotels-card-link" href="#">
-                <img class="hotels-card-image" src="" alt="Виды рядом с Desert Quail Inn." width="300" height="212">
+                <img class="hotels-card-image" src="images\hotel\hotel-desert-quail-inn.jpg"
+                  alt="Виды рядом с Desert Quail Inn." width="300" height="212">
               </a>
               <a class="hotels-card-link" href="#">
                 <h3 class="hotels-card-title">Desert Quail Inn</h3>
@@ -192,8 +197,8 @@
             </article>
             <article class="hotels-card">
               <a class="hotels-card-link" href="#">
-                <img class="hotels-card-image" src="images/hotels/hotel-greentree.jpg" alt="Виды рядом с GreenTree Inn."
-                  width="300" height="212">
+                <img class="hotels-card-image" src="images\hotel\hotel-greentree-inn.jpg"
+                  alt="Виды рядом с GreenTree Inn." width="300" height="212">
               </a>
               <a class="hotels-card-link" href="#">
                 <h3 class="hotels-card-title">GreenTree Inn</h3>
