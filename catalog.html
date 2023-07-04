@@ -49,82 +49,84 @@
 
       <main class="main-catalog">
         <header class="inner-header image-container">
-          <h1 class="inner-header-title">Гостиницы Седоны</h1>
-          <ul class="breadcrumbs">
-            <li class="breadcrumbs-item">
-              <a class="breadcrumbs-link" href="index.html">
-                <span class="visually-hidden">Главная.</span>
-              </a>
-            </li>
-            <li class="breadcrumbs-item">
-              <a class="breadcrumbs-link">Гостиницы</a>
-            </li>
-          </ul>
-          <section class="catalog-products">
-            <h2 class="visually-hidden">Поиск гостиниц с фильтрами</h2>
-            <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get"
-              oninput="pricecount.value=price.value">
-              <fieldset class="catalog-filter-group">
-                <legend class="catalog-filter-title">Инфраструктура:</legend>
-                <ul class="catalog-filter-list">
-                  <li class="catalog-filter-item">
-                    <label class="control">
-                      <input class="control-input" type="checkbox" name="pool" checked>
-                      Бассейн
-                    </label>
-                  </li>
-                  <li class="catalog-filter-item">
-                    <label class="control">
-                      <input class="control-input" type="checkbox" name="parking" checked>
-                      Парковка
-                    </label>
-                  </li>
-                  <li class="catalog-filter-item">
-                    <label class="control">
-                      <input class="control-input" type="checkbox" name="wi-fi">
-                      Wi-Fi
-                    </label>
-                  </li>
-                </ul>
-              </fieldset>
-              <fieldset class="catalog-filter-group">
-                <legend class="catalog-filter-title">Тип жилья:</legend>
-                <ul class="catalog-filter-list">
-                  <li class="catalog-filter-item">
-                    <label class="control">
-                      <input class="control-input" type="radio" name="product-group" value="hotel" checked>
-                      Гостиница
-                    </label>
-                  </li>
-                  <li class="catalog-filter-item">
-                    <label class="control">
-                      <input class="control-input" type="radio" name="product-group" value="motel">
-                      Мотель
-                    </label>
-                  </li>
-                  <li class="catalog-filter-item">
-                    <label class="control">
-                      <input class="control-input" type="radio" name="product-group" value="apartments">
-                      Апартаменты
-                    </label>
-                  </li>
-                </ul>
-              </fieldset>
-              <fieldset class="filter-group">
-                <legend class="filter-caption">Стоимость, ₽:</legend>
-                <label for="price">
-                  <span class="visually-hidden">Цена.</span>
-                </label>
-                <input type="range" id="price" name="price" min="0" max="9000" step="100">
-                <div class="price-user">
-                  <output name="pricecount">0</output>
-                  <output name="pricecount-max">9000</output>
-                </div>
-              </fieldset>
-              <button class="filter-button" type="submit">Применить</button>
-              <button class="filter-button button-without-color" type="reset">Сбросить</button>
-            </form>
-          </section>
+          <div class="catalog-container">
+            <h1 class="inner-header-title">Гостиницы Седоны</h1>
+            <ul class="breadcrumbs">
+              <li class="breadcrumbs-item">
+                <a class="breadcrumbs-link-home" href="index.html">
+                  <span class="visually-hidden">Главная.</span>
+                </a>
+              </li>
+              <li class="breadcrumbs-item">
+                <a class="breadcrumbs-link">Гостиницы</a>
+              </li>
+            </ul>
+            <section class="catalog-products">
+              <h2 class="visually-hidden">Поиск гостиниц с фильтрами</h2>
+              <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get"
+                oninput="pricecount.value=price.value">
+                <fieldset class="catalog-filter-group">
+                  <legend class="catalog-filter-title">Инфраструктура:</legend>
+                  <ul class="catalog-filter-list">
+                    <li class="catalog-filter-item">
+                      <label class="control">
+                        <input class="control-input" type="checkbox" name="pool" checked>
+                        Бассейн
+                      </label>
+                    </li>
+                    <li class="catalog-filter-item">
+                      <label class="control">
+                        <input class="control-input" type="checkbox" name="parking" checked>
+                        Парковка
+                      </label>
+                    </li>
+                    <li class="catalog-filter-item">
+                      <label class="control">
+                        <input class="control-input" type="checkbox" name="wi-fi">
+                        Wi-Fi
+                      </label>
+                    </li>
+                  </ul>
+                </fieldset>
+                <fieldset class="catalog-filter-group">
+                  <legend class="catalog-filter-title">Тип жилья:</legend>
+                  <ul class="catalog-filter-list">
+                    <li class="catalog-filter-item">
+                      <label class="control">
+                        <input class="control-input" type="radio" name="product-group" value="hotel" checked>
+                        Гостиница
+                      </label>
+                    </li>
+                    <li class="catalog-filter-item">
+                      <label class="control">
+                        <input class="control-input" type="radio" name="product-group" value="motel">
+                        Мотель
+                      </label>
+                    </li>
+                    <li class="catalog-filter-item">
+                      <label class="control">
+                        <input class="control-input" type="radio" name="product-group" value="apartments">
+                        Апартаменты
+                      </label>
+                    </li>
+                  </ul>
+                </fieldset>
+                <fieldset class="filter-group">
+                  <legend class="catalog-filter-title">Стоимость, ₽:</legend>
+                  <label for="price">
+                    <span class="visually-hidden">Цена.</span>
+                  </label>
+                  <input type="range" id="price" name="price" min="0" max="9000" step="100">
+                  <div class="price-user">
+                    <output name="pricecount">0</output>
+                    <output name="pricecount-max">9000</output>
+                  </div>
+                </fieldset>
+                <button class="filter-button" type="submit">Применить</button>
+                <button class="filter-button button-without-color" type="reset">Сбросить</button>
+              </form>
+            </section>
+          </div>
         </header>
         <section class="catalog-hotels">
           <h2 class="visually-hidden">Список отфильтрованных гостиниц.</h2>
@@ -235,16 +237,18 @@
             </ul>
           </div>
         </section>
-        <section class="subscribe subscribe-background">
+        <section class="subscribe ">
           <h2 class="visually-hidden">Подписаться на рассылку.</h2>
-          <p class="subscribe-title">Подпишитесь на рассылку</p>
-          <p class="subscribe-subtitle">Только полезная информация и никакого спама,<br> честное бойскаутское!</p>
-          <form class="newsletter-form" action="https://echo.htmlacademy.ru/" method="post">
-            <input class="field" placeholder="Ваш e-mail" type="email" required>
-            <button class="button newsletter-button" type="submit">
-              <span class="visually-hidden">Подписаться</span>
-            </button>
-          </form>
+          <div class="subscribe-form">
+            <p class="subscribe-title">Подпишитесь на рассылку</p>
+            <p class="subscribe-subtitle">Только полезная информация и никакого спама,<br> честное бойскаутское!</p>
+            <form class="newsletter-form" action="https://echo.htmlacademy.ru/" method="post">
+              <input class="field-subscribe" placeholder="Ваш e-mail" type="email" required>
+              <button class="button newsletter-button" type="submit">
+                <span>Подписаться</span>
+              </button>
+            </form>
+          </div>
         </section>
       </main>
 
