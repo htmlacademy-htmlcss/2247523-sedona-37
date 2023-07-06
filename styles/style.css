@@ -13,14 +13,19 @@
   src: url("../fonts/ptsans-700.woff2") format("woff2");
   font-display: swap;
 }
+html{
+height: 100%;
+}
 
 body {
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
   line-height: 21px;
-  background: #F2F2F2;
+  background-color: #F2F2F2;
   color: #000000;
   margin: 0;
+  min-height: 100%;
+  display: flex;
 }
 
 h2,
@@ -39,7 +44,10 @@ p {
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  background: #fff
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  background-color: #fff
 }
 
 .visually-hidden {
@@ -69,6 +77,9 @@ p {
 }
 
 /* LIST-NAVIGATION */
+.main-container {
+  flex-grow: 1;
+}
 .logo-link {
   position: relative;
 }
@@ -236,6 +247,8 @@ p {
 }
 
 .attractions-item {
+  min-height: 385px;
+  width: 400px;
   list-style-type: none;
   padding: 103px 85px;
 }
@@ -320,6 +333,7 @@ p {
   text-align: center;
   display: flex;
   padding: 0;
+  justify-content: space-between;
 }
 
 .icon-hostel::before {
