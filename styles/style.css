@@ -13,8 +13,9 @@
   src: url("../fonts/ptsans-700.woff2") format("woff2");
   font-display: swap;
 }
-html{
-height: 100%;
+
+html {
+  height: 100%;
 }
 
 body {
@@ -77,9 +78,7 @@ p {
 }
 
 /* LIST-NAVIGATION */
-.main-container {
-  flex-grow: 1;
-}
+
 .logo-link {
   position: relative;
 }
@@ -88,7 +87,7 @@ p {
   display: flex;
   flex: 1;
   justify-content: space-between;
-  margin-left: 28px;
+  margin-left: 29px;
 }
 
 .nav-list {
@@ -113,20 +112,25 @@ p {
 }
 
 .nav-icon {
-  padding: 22px 12px;
+  padding: 22px 10px 22px 12px;
   display: block;
-  font-size: 20px;
-  line-height: 24px;
+  line-height: 0;
   color: #000000;
   text-decoration: none;
 }
 
 .search::before {
-  content: url('../images/icon-functional/search.svg')
+  content: url('../images/icon-functional/search.svg');
+  width: 20px;
+  height: 20px;
+  padding: 1px 0 0 1px;
 }
 
 .like::before {
-  content: url('../images/icon-functional/heart.svg')
+  content: url('../images/icon-functional/heart.svg');
+  width: 20px;
+  height: 20px;
+  padding: 2px 1px 1px 1px;
 }
 
 .like {
@@ -150,76 +154,16 @@ p {
   justify-content: center;
 }
 
-/* FOOTER */
-.footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 40px 70px 30px 70px;
+
+/* MAIN */
+.main-container {
+  flex-grow: 1;
 }
 
-.footer-social-list {
-  display: flex;
-  margin: 5px 0;
-  padding: 0;
-  align-items: center;
-  justify-content: center;
-  gap:10px;
-}
-
-.social-icon {
-  display: block;
+.sedona-welcome-box {
   line-height: 0;
 }
 
-.footer-social-item {
-  list-style-type: none;
-}
-
-.vkontakte::before {
-  content: url('../images/icon-contacts/vkontakte.svg')
-}
-
-.vkontakte {
-  padding: 0 10px;
-  width: 24px;
-  height: 14px;
-}
-
-.telegram {
-  padding: 1px 10px;
-  width: 18px;
-  height: 16px;
-}
-
-.youtube {
-  padding: 0 10px;
-  width: 22px;
-  height: 17px;
-}
-
-.telegram::before {
-  content: url('../images/icon-contacts/telegram.svg')
-}
-
-.youtube::before {
-  content: url('../images/icon-contacts/youtube.svg')
-}
-
-.link-html:before {
-  content: url('../images/logo/logo-htmlacademy.svg')
-}
-
-.contacts-phone {
-  font-family: "PT Sans";
-  font-size: 40px;
-  color: #000000;
-  text-decoration: none;
-  line-height: 40px;
-  font-style: normal;
-}
-
-/* MAIN */
 /* ATTRACTIONS */
 .attractions-text {
   padding: 69px 0;
@@ -250,7 +194,6 @@ p {
   min-height: 385px;
   width: 400px;
   list-style-type: none;
-  padding: 103px 85px;
 }
 
 .attractions-header {
@@ -320,8 +263,12 @@ p {
 }
 
 .advantages-item {
+  text-align: center;
   list-style-type: none;
-  padding: 81px 85px;
+  padding: 71px 0 81px 0;
+  display: flex;
+  flex-direction: column;
+  flex: 1 0;
 }
 
 .color-blue-advantages {
@@ -333,25 +280,26 @@ p {
   text-align: center;
   display: flex;
   padding: 0;
+  margin: 0;
   justify-content: space-between;
 }
 
 .icon-hostel::before {
   content: url('../images/advantages/housing.svg');
-  height: 75px;
-  width: 72px;
+  display: block;
+  line-height: 0;
 }
 
 .icon-food::before {
   content: url('../images/advantages/eating.svg');
-  height: 74px;
-  width: 70px;
+  display: block;
+  line-height: 0;
 }
 
 .icon-souvenir::before {
   content: url('../images/advantages/souvenir.svg');
-  height: 64px;
-  width: 76px;
+  display: block;
+  line-height: 0;
 }
 
 /* FIND-FORM */
@@ -377,7 +325,7 @@ p {
 .find-button {
   font-size: 20px;
   line-height: 36px;
-  margin: 8px 50px;
+  padding: 8px 50px;
 }
 
 /* SUBSCRIBE-FORM */
@@ -431,9 +379,10 @@ p {
   background-color: #82B3D3;
 }
 
-.newsletter-form{
+.newsletter-form {
   display: flex;
 }
+
 /* CATALOG-FILTER */
 .image-container {
   background-image: url("../images/background-catolog.jpg");
@@ -664,15 +613,17 @@ p {
   color: rgba(255, 255, 255, 1);
   background-color: rgba(130, 179, 211, 1);
 }
-.pagination-current{
-  color:rgba(0, 0, 0, 1);
-  background-color:rgba(242, 242, 242, 1);
+
+.pagination-current {
+  color: rgba(0, 0, 0, 1);
+  background-color: rgba(242, 242, 242, 1);
 }
-.pagination-opacity{
+
+.pagination-opacity {
   font-size: 22px;
   line-height: 26px;
-  color:rgba(0, 0, 0, 1);
-  background-color:transparent;
+  color: rgba(0, 0, 0, 1);
+  background-color: transparent;
 }
 
 .pagination-link {
@@ -680,12 +631,71 @@ p {
   color: inherit;
 }
 
+/* FOOTER */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 70px 30px 70px;
+}
 
+.footer-social-list {
+  display: flex;
+  margin: 5px 0;
+  padding: 0;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
 
-/* {
-  font-size: ;
-  line-height: ;
-  color: ;
-  font-weight: ;
-  font-family: ;
-} */
+.social-icon {
+  display: block;
+  line-height: 0;
+}
+
+.footer-social-item {
+  list-style-type: none;
+}
+
+.vkontakte::before {
+  content: url('../images/icon-contacts/vkontakte.svg')
+}
+
+.vkontakte {
+  padding: 0 10px;
+  width: 24px;
+  height: 14px;
+}
+
+.telegram {
+  padding: 1px 10px;
+  width: 18px;
+  height: 16px;
+}
+
+.youtube {
+  padding: 0 10px;
+  width: 22px;
+  height: 17px;
+}
+
+.telegram::before {
+  content: url('../images/icon-contacts/telegram.svg')
+}
+
+.youtube::before {
+  content: url('../images/icon-contacts/youtube.svg')
+}
+
+.link-html:before {
+  content: url('../images/logo/logo-htmlacademy.svg')
+}
+
+.contacts-phone {
+  font-family: "PT Sans";
+  font-size: 40px;
+  color: #000000;
+  text-decoration: none;
+  line-height: 40px;
+  font-style: normal;
+}
