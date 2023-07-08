@@ -52,7 +52,14 @@ p {
 }
 
 .visually-hidden {
-  display: none;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 /* BUTTON */
@@ -72,7 +79,7 @@ p {
 
 /* HEADER */
 .header {
-  height: 64px;
+  min-height: 64px;
   padding: 0 70px;
   display: flex;
 }
@@ -80,20 +87,22 @@ p {
 /* LIST-NAVIGATION */
 
 .logo-link {
-  position: relative;
+  position: absolute;
 }
 
 .nav {
   display: flex;
   flex: 1;
   justify-content: space-between;
-  margin-left: 29px;
+  margin-left: 168px;
 }
 
 .nav-list {
   margin: 0;
   padding: 0;
   display: flex;
+  flex-wrap: wrap;
+  max-width: 622px;
   align-items: center;
 }
 
@@ -121,15 +130,11 @@ p {
 
 .search::before {
   content: url('../images/icon-functional/search.svg');
-  width: 20px;
-  height: 20px;
   padding: 1px 0 0 1px;
 }
 
 .like::before {
   content: url('../images/icon-functional/heart.svg');
-  width: 20px;
-  height: 20px;
   padding: 2px 1px 1px 1px;
 }
 
@@ -153,7 +158,6 @@ p {
   align-items: center;
   justify-content: center;
 }
-
 
 /* MAIN */
 .main-container {
@@ -186,18 +190,41 @@ p {
 }
 
 .attractions-list {
+  display: flex;
+  flex-wrap: wrap;
   text-align: center;
   padding: 0;
 }
 
 .attractions-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   min-height: 385px;
   width: 400px;
   list-style-type: none;
+  flex: 1 1 33%;
+}
+
+.img-flex {
+  flex: 2 1 66%;
 }
 
 .attractions-header {
   margin-bottom: 30px;
+}
+
+.delimiter-grey {
+  width: 60px;
+  height: 2px;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.delimiter-white {
+  width: 60px;
+  height: 2px;
+  background-color: rgba(255, 255, 255, 0.3);
 }
 
 .attractions-description {
@@ -234,7 +261,7 @@ p {
 
 /* ADVANTAGES */
 .advantages-text {
-  padding: 64px 0;
+  padding: 47px 0 64px 0;
 }
 
 .advantages-title {
@@ -508,7 +535,6 @@ p {
 
 .view-wrapper {
   display: flex;
-  gap: 8px;
 }
 
 .button-view {
@@ -522,30 +548,31 @@ p {
   border: 2px solid #E5E5E5;
 }
 
+.button-view:not(:last-child) {
+  margin-right: 8px;
+}
+
 .button-view-active {
   border-color: #000000;
 }
 
 .show-cards::before {
   content: url('../images/icon-functional/button-tile.svg');
-  height: 20px;
 }
 
 .show-card::before {
   content: url('../images/icon-functional/button-slideshow.svg');
-  height: 20px;
 }
 
 .show-list::before {
   content: url('../images/icon-functional/button-list.svg');
-  height: 20px;
 }
 
 .hotels-card {
   flex: 1 0 340px;
   max-width: 340px;
   box-sizing: border-box;
-  height: 438px;
+  min-height: 438px;
   border: 1px solid rgba(230, 230, 230, 1);
   border-radius: 4px;
   padding: 20px;
@@ -663,20 +690,14 @@ p {
 
 .vkontakte {
   padding: 0 10px;
-  width: 24px;
-  height: 14px;
 }
 
 .telegram {
   padding: 1px 10px;
-  width: 18px;
-  height: 16px;
 }
 
 .youtube {
   padding: 0 10px;
-  width: 22px;
-  height: 17px;
 }
 
 .telegram::before {
