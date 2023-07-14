@@ -48,7 +48,8 @@ p {
   display: flex;
   flex-direction: column;
   min-height: 100%;
-  background-color: #fff
+  background-color: #fff;
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
 }
 
 .visually-hidden {
@@ -69,12 +70,88 @@ p {
   line-height: 20px;
   font-weight: 700;
   padding: 8px 34px;
-  background-color: #756157;
+
   text-decoration: none;
-  color: #FFFFFF;
+
   text-transform: uppercase;
   border-radius: 4px;
   border: 0;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.button-brown {
+  background-color: rgba(117, 97, 87, 1);
+  color: rgba(255, 255, 255, 1);
+}
+
+.button-brown:hover,
+.button-brown:focus {
+  background-color: rgba(97, 80, 72, 1);
+}
+
+.button-brown:active {
+  background-color: rgba(117, 97, 87, 1);
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.button-green-active {
+  background: rgba(125, 181, 79, 1);
+  padding: 8px 18px;
+  color: #FFFFFF;
+}
+
+.button-green-active:hover,
+.button-green-active:focus {
+  background-color: rgba(108, 158, 66, 1);
+}
+
+.button-green-active:active {
+  color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(125, 181, 79, 1);
+}
+
+.button-blue {
+  color: rgba(255, 255, 255, 1);
+  background-color: rgba(130, 179, 211, 1);
+}
+
+.button-blue:hover,
+.button-blue:focus {
+  background-color: rgba(104, 162, 202, 1);
+}
+
+.button-blue:active {
+  color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(130, 179, 211, 1);
+}
+
+.button-without-color-filter {
+  color: rgba(255, 255, 255, 1);
+  background: transparent;
+}
+
+.button-without-color-filter:hover {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.button-without-color-filter:focus {
+  border: 3px solid rgba(131, 179, 211, 1);
+  box-sizing: border-box;
+}
+
+.button-without-color-filter:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.button-without-color-filter:disabled {
+  color: rgba(255, 255, 255, 0.1);
+}
+
+.button-brown:disabled,
+.button-blue:disabled,
+.button-green-active:disabled {
+  background-color: rgba(229, 229, 229, 1);
 }
 
 /* HEADER */
@@ -118,6 +195,11 @@ p {
   color: #000000;
   font-weight: 700;
   text-decoration: none;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+  background-color: rgb(158, 210, 241);
 }
 
 .nav-link-current {
@@ -307,6 +389,7 @@ p {
   flex-direction: column;
   flex: 1 0;
 }
+
 .advantages-name {
   font-size: 24px;
   line-height: 28px;
@@ -470,10 +553,24 @@ p {
 .breadcrumbs-link {
   font-size: 16px;
   line-height: 21px;
+  color: rgba(255, 255, 255, 1);
 }
 
-.breadcrumbs-link-home::before {
-  content: url('../images/icon-functional/home.svg');
+
+.breadcrumbs-link-home {
+  color: rgba(255, 255, 255, 1);
+}
+
+.breadcrumbs-link-home:hover {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.breadcrumbs-link-home:focus {
+  color: rgba(255, 255, 255, 1);
+}
+
+.breadcrumbs-link-home:active {
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .arrow::before {
@@ -527,6 +624,7 @@ p {
   gap: 70px;
 }
 
+
 .group-buttton {
   display: flex;
   flex-direction: column;
@@ -540,12 +638,7 @@ p {
 }
 
 .button-blue-filter {
-  background-color: rgba(130, 179, 211, 1);
   padding: 8px 50px;
-}
-
-.button-without-color-filter {
-  background: transparent;
 }
 
 .button-brown-catalog {
@@ -556,12 +649,6 @@ p {
   font-family: "PT Sans", sans-serif;
   background: rgba(130, 179, 211, 1);
   padding: 8px 20px;
-}
-
-.button-green-active {
-  font-family: "PT Sans", sans-serif;
-  background: rgba(125, 181, 79, 1);
-  padding: 8px 18px;
 }
 
 .button-grey {
@@ -604,6 +691,11 @@ p {
   border: 2px solid #E5E5E5;
 }
 
+.select-control:hover,
+.select-control:focus {
+  border: 2px solid rgba(104, 162, 202, 1)
+}
+
 .view-wrapper {
   display: flex;
 }
@@ -618,6 +710,18 @@ p {
   border-radius: 4px;
   box-sizing: border-box;
   border: 2px solid #E5E5E5;
+}
+
+.button-view:hover {
+  border: 2px solid rgba(0, 0, 0, 1);
+}
+
+.button-view:focus {
+  border: 2px solid rgba(104, 162, 202, 1);
+}
+
+.button-view:active {
+  border: 2px solid rgba(0, 0, 0, 1);
 }
 
 .button-view:not(:last-child) {
@@ -714,6 +818,22 @@ p {
   text-align: center;
   color: rgba(255, 255, 255, 1);
   background-color: rgba(130, 179, 211, 1);
+  box-sizing: border-box;
+}
+
+.pagination-item:hover:not(.pagination-current):not(.pagination-opacity) {
+  background-color: rgba(104, 162, 202, 1);
+  border: 1px solid rgba(130, 179, 211, 1);
+}
+
+.pagination-item:focus:not(.pagination-current):not(.pagination-opacity) {
+  background-color: rgba(104, 162, 202, 1);
+  border: 1px solid rgba(130, 179, 211, 1);
+}
+
+.pagination-item:active:not(.pagination-current):not(.pagination-opacity) {
+  color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(130, 179, 211, 1);
 }
 
 .pagination-current {
@@ -732,10 +852,12 @@ p {
   text-decoration: none;
   color: inherit;
 }
-.grey-line{
+
+.grey-line {
   height: 1px;
   background-color: rgba(230, 230, 230, 1);
 }
+
 /* FOOTER */
 .footer {
   display: flex;
@@ -756,14 +878,23 @@ p {
 .social-icon {
   display: block;
   line-height: 0;
+  color: rgba(131, 179, 211, 1);
+}
+
+.social-icon:hover {
+  color: rgba(104, 162, 202, 1);
+}
+
+.social-icon:focus {
+  color: rgba(104, 162, 202, 1);
+}
+
+.social-icon:active {
+  color: rgba(104, 162, 202, 0.3);
 }
 
 .footer-social-item {
   list-style-type: none;
-}
-
-.vkontakte::before {
-  content: url('../images/icon-contacts/vkontakte.svg')
 }
 
 .vkontakte {
@@ -778,23 +909,39 @@ p {
   padding: 0 10px;
 }
 
-.telegram::before {
-  content: url('../images/icon-contacts/telegram.svg')
+.link-html {
+  color: rgba(0, 0, 0, 1);
 }
 
-.youtube::before {
-  content: url('../images/icon-contacts/youtube.svg')
+.link-html:hover {
+  color: rgba(117, 97, 87, 1);
 }
 
-.link-html:before {
-  content: url('../images/logo/logo-htmlacademy.svg')
+.link-html:focus {
+  color: rgba(117, 97, 87, 1);
+}
+
+.link-html:active {
+  color: rgba(117, 97, 87, 0.3);
 }
 
 .contacts-phone {
   font-family: "PT Sans";
   font-size: 40px;
-  color: #000000;
+  color: rgba(0, 0, 0, 1);
   text-decoration: none;
   line-height: 40px;
   font-style: normal;
+}
+
+.contacts-phone:hover {
+  color: rgba(117, 97, 87, 1);
+}
+
+.contacts-phone:focus {
+  color: rgba(117, 97, 87, 1);
+}
+
+.contacts-phone:active {
+  color: rgba(117, 97, 87, 0.3);
 }
