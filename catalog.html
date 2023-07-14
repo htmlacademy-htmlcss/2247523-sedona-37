@@ -11,7 +11,7 @@
 
   <body>
     <div class="container">
-      <header class="header">
+      <header class="header" data-test="header">
         <a class="logo-link" href="index.html">
           <img class="logo-image" src="images\logo\logo-sedona.svg" alt="Логотип города Седона." width="140"
             height="70">
@@ -47,7 +47,7 @@
         </nav>
       </header>
 
-      <main class="main-container">
+      <main class="main-container" data-test="main">
         <header class="inner-header image-container">
           <div class="catalog-container">
             <h1 class="inner-header-title">Гостиницы Седоны</h1>
@@ -59,7 +59,6 @@
                     <path d="m10.4 3-6 5.8V15h12V8.8l-6-5.8Zm5 11h-10V9.2l5-4.8 5 4.8V14Z" />
                     <path d="M8.4 13h1v-2.5h2V13h1V9.5h-4V13Z" />
                   </svg>
-
                   <span class="visually-hidden">Главная.</span>
                 </a>
               </li>
@@ -70,11 +69,10 @@
                 <a class="breadcrumbs-link">Гостиницы</a>
               </li>
             </ul>
-            <section class="catalog-products">
+            <section class="catalog-products" data-test="filter">
               <h2 class="visually-hidden">Поиск гостиниц с фильтрами</h2>
               <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get"
                 oninput="pricecount.value=price.value">
-
                 <div class="box-filter-list">
                   <fieldset class="catalog-filter-group">
                     <legend class="catalog-filter-title">Инфраструктура:</legend>
@@ -82,18 +80,21 @@
                       <li class="catalog-filter-item">
                         <label class="control">
                           <input class="control-input" type="checkbox" name="pool" checked>
+                          <span class="control-mark"></span>
                           Бассейн
                         </label>
                       </li>
                       <li class="catalog-filter-item">
                         <label class="control">
                           <input class="control-input" type="checkbox" name="parking" checked>
+                          <span class="control-mark"></span>
                           Парковка
                         </label>
                       </li>
                       <li class="catalog-filter-item">
                         <label class="control">
                           <input class="control-input" type="checkbox" name="wi-fi">
+                          <span class="control-mark"></span>
                           Wi-Fi
                         </label>
                       </li>
@@ -105,18 +106,21 @@
                       <li class="catalog-filter-item">
                         <label class="control">
                           <input class="control-input" type="radio" name="product-group" value="hotel" checked>
+                          <span class="control-round"></span>
                           Гостиница
                         </label>
                       </li>
                       <li class="catalog-filter-item">
                         <label class="control">
                           <input class="control-input" type="radio" name="product-group" value="motel">
+                          <span class="control-round"></span>
                           Мотель
                         </label>
                       </li>
                       <li class="catalog-filter-item">
                         <label class="control">
                           <input class="control-input" type="radio" name="product-group" value="apartments">
+                          <span class="control-round"></span>
                           Апартаменты
                         </label>
                       </li>
@@ -129,10 +133,23 @@
                     <label for="price">
                       <span class="visually-hidden">Цена.</span>
                     </label>
-                    <input type="range" id="price" name="price" min="0" max="9000" step="100">
                     <div class="price-user">
-                      <output name="pricecount">0</output>
-                      <output name="pricecount-max">9000</output>
+                      <label class="min-price">
+                        <input name="min-price" value="0" />
+                      </label>
+                      <label class="max-price">
+                        <input name="max-price" value="9000">
+                      </label>
+                    </div>
+                    <div class="range-scale">
+                      <div class="range-bar" style="right: 69px; left: 10px;">
+                        <button class="range-toggle toggle-min">
+                          <span class="visually-hidden">Изменить минимальную цену.</span>
+                        </button>
+                        <button class="range-toggle toggle-max">
+                          <span class="visually-hidden">Изменить максимальную цену.</span>
+                        </button>
+                      </div>
                     </div>
                   </fieldset>
                   <div class="group-buttton">
@@ -172,7 +189,7 @@
                 </div>
               </div>
             </div>
-            <div class="hotels-list">
+            <div class="hotels-list" data-test="catalog">
               <article class="hotels-card">
                 <a class="hotels-card-link" href="#">
                   <img class="hotel-card-image" src="images\hotel\hotel-amara-resort.jpg"
@@ -289,7 +306,7 @@
             </div>
           </div>
         </section>
-        <section class="subscribe ">
+        <section class="subscribe " data-test="subscribe">
           <h2 class="visually-hidden">Подписаться на рассылку.</h2>
           <div class="subscribe-form">
             <p class="subscribe-title">Подпишитесь на рассылку</p>
@@ -302,7 +319,7 @@
         </section>
       </main>
 
-      <footer class="footer">
+      <footer class="footer" data-test="footer">
         <section class="footer-social">
           <h2 class="visually-hidden">Мы в социальных сетях.</h2>
           <ul class="footer-social-list">
