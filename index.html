@@ -203,6 +203,83 @@
           </a>
         </div>
       </footer>
+
+      <div class="modal-container visually-hidden" data-test="modal">
+        <div class="modal-window">
+          <button class="modal-close-button">
+            <span class="visually-hidden">Закрыть.</span>
+          </button>
+          <section class="modal-content">
+            <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
+            <form action="https://echo.htmlacademy.ru/courses" method="get">
+              <div class="modal-row">
+                <label class="title-form title-start" for="start-date">Дата Заезда:</label>
+                <div class="start-date-block">
+                  <input class="modal-input-date" type="text" id="start-date" name="start-date"
+                    placeholder="Укажите дату" value="27 апреля 2020" required>
+                  <button class="calendar-icon" type="button">
+                    <span class="visually-hidden">Открыть календарь для выбора дата заезда.</span>
+                  </button>
+                  <span class="message-box error">Мы не можем отправить вас в прошлое.</span>
+                  <span class="message-box verified-date visually-hidden">На эти даты есть свободные номера. Пока
+                    есть.</span>
+                </div>
+              </div>
+              <div class="modal-row">
+                <label class="title-form title-stop" for="end-date">Дата Выезда:</label>
+                <div class="end-date-block">
+                  <input class="modal-input-date" type="text" id="end-date" name="end-date" placeholder="Укажите дату"
+                    value="1 сентября 2023" required>
+                  <button class="calendar-icon" type="button">
+                    <span class="visually-hidden">Открыть календарь для выбора даты выезда.</span>
+                  </button>
+                  <span class="message-box error visually-hidden">Мы не можем отправить вас в прошлое.</span>
+                  <span class="message-box verified-date">На эти даты есть свободные номера. Пока есть.</span>
+                </div>
+
+              </div>
+              <div class="modal-row">
+                <div class="modal-col">
+                  <label class="title-form" for="number-adults">Взрослые:</label>
+                  <div class="number-people adults">
+                    <button class="button-counter button-minus" type="button" aria-label="Убавить количество взрослых.">
+
+                    </button>
+                    <input class="modal-input-age" type="number" id="number-adults" name="adults"
+                      aria-label="Указанное количество взрослых." placeholder="0" value="2" size="10">
+                    <button class=" button-counter button-plus" type="button"
+                      aria-label="Прибавить количество взрослых.">
+
+                    </button>
+                  </div>
+                </div>
+                <div class="modal-col">
+                  <div class="children-wrapper">
+                    <label class="title-form" for="number-children">Дети:</label>
+                    <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label-children">
+                      <span class="tooltip-text-children" role="tooltip" id="tooltip-label-children">
+                        Укажите количество детей,<br>которые будут с вами, возраст<br> которых от 6 до 18 лет.Дети<br>
+                        до 6 лет
+                        размещаются <br>бесплатно.</span>
+                    </button>
+                  </div>
+                  <div class="number-people children">
+                    <button class=" button-counter button-minus" type="button" aria-label="Убавить количество детей.">
+
+                    </button>
+                    <input class="modal-input-age" type="number" id="number-children" name="children"
+                      aria-label="Указанное количество детей." placeholder="0" value="2" />
+                    <button class="button-counter button-plus" type="button" aria-label="Прибавить количество детей.">
+
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <button class="button button-blue button-form-find" type="submit">Найти</button>
+            </form>
+          </section>
+        </div>
+      </div>
     </div>
   </body>
 
