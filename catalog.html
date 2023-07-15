@@ -69,9 +69,9 @@
                 <a class="breadcrumbs-link">Гостиницы</a>
               </li>
             </ul>
-            <section class="catalog-products" data-test="filter">
+            <section class="catalog-products">
               <h2 class="visually-hidden">Поиск гостиниц с фильтрами</h2>
-              <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get"
+              <form class="catalog-filter" data-test="filter" action="https://echo.htmlacademy.ru/" method="get"
                 oninput="pricecount.value=price.value">
                 <div class="box-filter-list">
                   <fieldset class="catalog-filter-group">
@@ -162,7 +162,7 @@
           </div>
         </header>
         <section class="catalog-hotels">
-          <div class="catalog-hotels-box">
+          <div class="catalog-hotels-box" data-test="catalog">
             <div class="filter-find-hotels">
               <h2 class="visually-hidden">Список отфильтрованных гостиниц.</h2>
               <div class="hotels-found">
