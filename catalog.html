@@ -69,30 +69,30 @@
                 <a class="breadcrumbs-link">Гостиницы</a>
               </li>
             </ul>
-            <section class="catalog-products" data-test="filter">
+            <section class="catalog-products">
               <h2 class="visually-hidden">Поиск гостиниц с фильтрами</h2>
-              <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get"
+              <form class="catalog-filter" data-test="filter" action="https://echo.htmlacademy.ru/" method="get"
                 oninput="pricecount.value=price.value">
                 <div class="box-filter-list">
                   <fieldset class="catalog-filter-group">
                     <legend class="catalog-filter-title">Инфраструктура:</legend>
                     <ul class="catalog-filter-list">
                       <li class="catalog-filter-item">
-                        <label class="control">
+                        <label class="control" tabindex="0">
                           <input class="control-input" type="checkbox" name="pool" checked>
                           <span class="control-mark"></span>
                           Бассейн
                         </label>
                       </li>
                       <li class="catalog-filter-item">
-                        <label class="control">
+                        <label class="control" tabindex="0">
                           <input class="control-input" type="checkbox" name="parking" checked>
                           <span class="control-mark"></span>
                           Парковка
                         </label>
                       </li>
                       <li class="catalog-filter-item">
-                        <label class="control">
+                        <label class="control" tabindex="0">
                           <input class="control-input" type="checkbox" name="wi-fi">
                           <span class="control-mark"></span>
                           Wi-Fi
@@ -104,21 +104,21 @@
                     <legend class="catalog-filter-title">Тип Жилья:</legend>
                     <ul class="catalog-filter-list">
                       <li class="catalog-filter-item">
-                        <label class="control">
+                        <label class="control" tabindex="0">
                           <input class="control-input" type="radio" name="product-group" value="hotel" checked>
                           <span class="control-round"></span>
                           Гостиница
                         </label>
                       </li>
                       <li class="catalog-filter-item">
-                        <label class="control">
+                        <label class="control" tabindex="0">
                           <input class="control-input" type="radio" name="product-group" value="motel">
                           <span class="control-round"></span>
                           Мотель
                         </label>
                       </li>
                       <li class="catalog-filter-item">
-                        <label class="control">
+                        <label class="control" tabindex="0">
                           <input class="control-input" type="radio" name="product-group" value="apartments">
                           <span class="control-round"></span>
                           Апартаменты
@@ -162,7 +162,7 @@
           </div>
         </header>
         <section class="catalog-hotels">
-          <div class="catalog-hotels-box">
+          <div class="catalog-hotels-box" data-test="catalog">
             <div class="filter-find-hotels">
               <h2 class="visually-hidden">Список отфильтрованных гостиниц.</h2>
               <div class="hotels-found">
